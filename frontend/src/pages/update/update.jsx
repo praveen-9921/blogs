@@ -18,7 +18,7 @@ const Update = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const result = await axios.put(`http://localhost:5501/api/blog/update/${id}`, blog);
+            const result = await axios.put(`https://blogs-backend-om6t.onrender.com/api/blog/update/${id}`, blog);
             if (result) {
                 alert("Blog Updated Successfully")
                 setBlog({
