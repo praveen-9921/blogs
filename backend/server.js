@@ -5,6 +5,7 @@ import messageModel from './models/blogs.model.js'
 
 
 const app = express()
+const port = process.env.PORT || 5501;
 app.use(cors())
 app.use(express.json())
 
@@ -86,6 +87,6 @@ app.get('/api/blog/:id',async(req,res)=>{
         res.send({success:false,message:"Blog not found"})
     }
 })
-app.listen(5501, () => {
+app.listen(port, () => {
     console.log('Server is running');
 })
