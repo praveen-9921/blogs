@@ -17,7 +17,7 @@ const Create = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const result = await axios.post('http://localhost:5501/api/create', blog);
+            const result = await axios.post('https://blogs-backend-om6t.onrender.com/api/create', blog);
             if (result) {
                 alert("Blog saved Successfully")
                 setBlog({
