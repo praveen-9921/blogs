@@ -8,7 +8,7 @@ const Blogs = () => {
     const navigate = useNavigate()
     const getBlogs = async () => {
         try {
-            const response = await axios.get('http://localhost:5501/api/allblogs')
+            const response = await axios.get('https://blogs-backend-om6t.onrender.com/api/allblogs')
             // console.log(response.data.blogs);
             setBlogs(response.data.blogs)
         } catch (err) { }
